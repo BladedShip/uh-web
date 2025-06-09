@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { SectionWrapper } from "@/components/ui";
 
 const HeroSection = () => {
     const [scrollY, setScrollY] = useState(0);
@@ -18,7 +19,7 @@ const HeroSection = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
     return (
-        <section id="hero" className="h-[80vh] md:h-screen w-full relative p-2 py-4">
+        <SectionWrapper id="hero">
             <div className="relative w-full h-full rounded-2xl overflow-hidden">
                 <img
                     src="/hero-bg.png"
@@ -42,7 +43,7 @@ const HeroSection = () => {
                         Accurately tracks sleep, HRV, temperature, and movement with daily actionable health insights.
                     </p>
 
-                    <Link href="/shop" className="cursor-pointer">
+                    <Link href="/shop" className="cursor-pointer active:border-none">
                         <button className="bg-black text-white px-[20px] py-[14px] md:px-[32px] md:py-[16px] rounded-[38px] md:rounded-[40px] font-normal text-[12px] md:text-[14px] leading-[100%] md:leading-[20px] tracking-[0px] md:tracking-[1%] uppercase active:border-none">
                             Buy Now
                         </button>
@@ -62,7 +63,7 @@ const HeroSection = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </SectionWrapper>
     );
 };
 
