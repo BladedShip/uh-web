@@ -6,13 +6,16 @@ const HeroSection = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrollY(window.scrollY);
+            const currentScrollY = window.scrollY;
+            // Only update when hero might still be visible
+            if (currentScrollY < window.innerHeight * 1.5) {
+                setScrollY(currentScrollY);
+            }
         };
 
-        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-
     return (
         <section id="hero" className="h-[80vh] md:h-screen w-full relative p-2 py-4">
             <div className="relative w-full h-full rounded-2xl overflow-hidden">
