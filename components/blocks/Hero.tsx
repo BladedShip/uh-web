@@ -30,7 +30,7 @@ const HeroSection = () => {
                     }}
                 />
 
-                <div className="absolute inset-0 flex flex-col items-center text-center text-white px-8 pt-24 md:pt-[20vh]">
+                <div className="absolute inset-0 flex flex-col items-center text-center text-white px-8 pt-28 md:pt-[20vh]">
                     <p className="text-[11px] md:text-[14px] font-medium tracking-[0.05em] md:tracking-[0.2em] mb-4 text-white uppercase">
                         World&apos;s Most Comfortable Sleep Tracker
                     </p>
