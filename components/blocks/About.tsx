@@ -2,6 +2,9 @@
 import React, { useEffect, useState, useRef } from "react";
 import { SectionWrapper } from "@/components/ui";
 
+const ANIMATION_SPEED = 0.9;
+const TRIGGER_POINT = 0.5;
+
 type Props = {};
 
 const AboutSection = (props: Props) => {
@@ -22,10 +25,13 @@ const AboutSection = (props: Props) => {
             const sectionTop = rect.top;
             const sectionHeight = rect.height;
 
-            const triggerPoint = windowHeight * 0.5;
+            const triggerPoint = windowHeight * TRIGGER_POINT;
 
             if (sectionTop <= triggerPoint && sectionTop + sectionHeight >= 0) {
-                const progress = Math.min(Math.max((triggerPoint - sectionTop) / (sectionHeight * 0.9), 0), 1);
+                const progress = Math.min(
+                    Math.max((triggerPoint - sectionTop) / (sectionHeight * ANIMATION_SPEED), 0),
+                    1
+                );
 
                 const totalWords = words.length;
                 const wordsToShow = Math.floor(progress * totalWords);
