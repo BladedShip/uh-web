@@ -53,7 +53,7 @@ const AboutSection = (props: Props) => {
     }, [words.length]);
 
     return (
-        <SectionWrapper id="about" className="flex items-center">
+        <SectionWrapper id="about" className="justify-center">
             <div ref={sectionRef} className="flex justify-center max-w-7xl mx-auto px-4 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 w-full">
                     {/* Section Header - Left Column */}

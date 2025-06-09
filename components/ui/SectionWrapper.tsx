@@ -9,7 +9,7 @@ type Props = {
 
 const SectionWrapper = ({ id, children, className }: Props) => {
     return (
-        <section id={id} className={cn(`h-[80vh] md:h-screen w-full relative p-2 py-4`, className)}>
+        <section id={id} className={cn(`min-h-[80vh] md:min-h-screen w-full relative p-2 py-4 flex flex-col`, className)}>
             {children}
         </section>
     );

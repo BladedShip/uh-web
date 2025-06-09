@@ -20,11 +20,11 @@ const HeroSection = () => {
     }, []);
     return (
         <SectionWrapper id="hero">
-            <div className="relative w-full h-full rounded-2xl overflow-hidden">
+            <div className="relative w-full h-full flex-1 rounded-2xl overflow-hidden">
                 <img
                     src="/hero-bg.png"
                     alt="Hero Image"
-                    className="w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover"
                     style={{
                         transform: `translateY(${scrollY * 0.5}px)`,
                     }}
@@ -43,7 +43,7 @@ const HeroSection = () => {
                         Accurately tracks sleep, HRV, temperature, and movement with daily actionable health insights.
                     </p>
 
-                    <Link href="/shop" className="cursor-pointer active:border-none">
+                    <Link href="/shop" className="cursor-pointer">
                         <button className="bg-black text-white px-[20px] py-[14px] md:px-[32px] md:py-[16px] rounded-[38px] md:rounded-[40px] font-normal text-[12px] md:text-[14px] leading-[100%] md:leading-[20px] tracking-[0px] md:tracking-[1%] uppercase active:border-none">
                             Buy Now
                         </button>
