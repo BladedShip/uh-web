@@ -1,12 +1,48 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState, useRef } from "react";
 import { SectionWrapper } from "@/components/ui";
 
 type Props = {};
 
 const AboutSection = (props: Props) => {
+    const [visibleWords, setVisibleWords] = useState(0);
+    const sectionRef = useRef<HTMLDivElement>(null);
+
+    const fullText =
+        "Beautiful from the inside. Dive into the realm of design ingenuity. Take a closer look at the stunning interiors, meticulously engineered for a seamless integration of form and function.";
+    const words = fullText.split(" ");
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (!sectionRef.current) return;
+
+            const rect = sectionRef.current.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            const sectionTop = rect.top;
+            const sectionHeight = rect.height;
+
+            const triggerPoint = windowHeight * 0.5;
+
+            if (sectionTop <= triggerPoint && sectionTop + sectionHeight >= 0) {
+                const progress = Math.min(Math.max((triggerPoint - sectionTop) / (sectionHeight * 0.9), 0), 1);
+
+                const totalWords = words.length;
+                const wordsToShow = Math.floor(progress * totalWords);
+
+                setVisibleWords(wordsToShow);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [words.length]);
+
     return (
         <SectionWrapper id="about" className="flex items-center">
-            <div className="flex justify-center max-w-7xl mx-auto px-4 lg:px-8">
+            <div ref={sectionRef} className="flex justify-center max-w-7xl mx-auto px-4 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 w-full">
                     {/* Section Header - Left Column */}
                     <div className="lg:col-span-2">
@@ -20,14 +56,18 @@ const AboutSection = (props: Props) => {
 
                     {/* Main Content - Right Column */}
                     <div className="lg:col-span-10">
-                        <h2 className="text-5xl font-medium tracking-tight" style={{ lineHeight: "65px" }}>
-                            <span className="text-black">
-                                Beautiful from the inside. Dive into the realm of design{" "}
-                            </span>
-                            <span className="text-gray-400">
-                                ingenuity. Take a closer look at the stunning interiors, meticulously engineered for a
-                                seamless integration of form and function.
-                            </span>
+                        <h2 className="text-[32px] lg:text-5xl font-medium tracking-[-0.03em] lg:tracking-tight leading-[40px] lg:leading-[65px]">
+                            {words.map((word, index) => (
+                                <span
+                                    key={index}
+                                    className={`transition-colors duration-300 ${
+                                        index < visibleWords ? "text-black" : "text-gray-400"
+                                    }`}
+                                >
+                                    {word}
+                                    {index < words.length - 1 ? " " : ""}
+                                </span>
+                            ))}
                         </h2>
                     </div>
                 </div>
