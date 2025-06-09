@@ -1,12 +1,29 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 
-type Props = {};
+const HeroSection = () => {
+    const [scrollY, setScrollY] = useState(0);
 
-const HeroSection = (props: Props) => {
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
         <section id="hero" className="h-[80vh] md:h-screen w-full relative p-2 py-4">
             <div className="relative w-full h-full rounded-2xl overflow-hidden">
-                <img src="/hero-bg.png" alt="Hero Image" className="w-full h-full object-cover" />
+                <img
+                    src="/hero-bg.png"
+                    alt="Hero Image"
+                    className="w-full h-full object-cover"
+                    style={{
+                        transform: `translateY(${scrollY * 0.5}px)`,
+                    }}
+                />
 
                 <div className="absolute inset-0 flex flex-col items-center text-center text-white px-8 pt-24 md:pt-[20vh]">
                     <p className="text-[11px] md:text-[14px] font-medium tracking-[0.05em] md:tracking-[0.2em] mb-4 text-white uppercase">
@@ -31,7 +48,10 @@ const HeroSection = (props: Props) => {
                         <img
                             src="/ring.png"
                             alt="Ultrahuman Ring AIR"
-                            className="w-full h-full object-contain transform -rotate-60"
+                            className="w-full h-full object-contain transform"
+                            style={{
+                                transform: `translateY(${scrollY * -0.3}px) rotate(-60deg)`,
+                            }}
                         />
                     </div>
                 </div>
