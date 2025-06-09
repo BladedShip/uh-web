@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 const HeroSection = () => {
     const [scrollY, setScrollY] = useState(0);
@@ -41,9 +42,11 @@ const HeroSection = () => {
                         Accurately tracks sleep, HRV, temperature, and movement with daily actionable health insights.
                     </p>
 
-                    <button className="bg-black text-white px-[20px] py-[14px] md:px-[32px] md:py-[16px] rounded-[38px] md:rounded-[40px] font-normal text-[12px] md:text-[14px] leading-[100%] md:leading-[20px] tracking-[0px] md:tracking-[1%] uppercase active:border-none">
-                        Buy Now
-                    </button>
+                    <Link href="/shop" className="cursor-pointer">
+                        <button className="bg-black text-white px-[20px] py-[14px] md:px-[32px] md:py-[16px] rounded-[38px] md:rounded-[40px] font-normal text-[12px] md:text-[14px] leading-[100%] md:leading-[20px] tracking-[0px] md:tracking-[1%] uppercase active:border-none">
+                            Buy Now
+                        </button>
+                    </Link>
                 </div>
 
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-[45%]">
