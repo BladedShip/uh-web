@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { SectionWrapper } from "@/components/ui";
 
 const ANIMATION_SPEED = 0.7;
-const TRIGGER_POINT = 0.62;
+const TRIGGER_POINT = 0.7;
 
 type Props = {};
 
