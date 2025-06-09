@@ -2,8 +2,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import { SectionWrapper } from "@/components/ui";
 
-const ANIMATION_SPEED = 0.9;
-const TRIGGER_POINT = 0.5;
+const ANIMATION_SPEED = 0.7;
+const TRIGGER_POINT = 0.62;
 
 type Props = {};
 
@@ -28,15 +28,21 @@ const AboutSection = (props: Props) => {
             const triggerPoint = windowHeight * TRIGGER_POINT;
 
             if (sectionTop <= triggerPoint && sectionTop + sectionHeight >= 0) {
-                const progress = Math.min(
-                    Math.max((triggerPoint - sectionTop) / (sectionHeight * ANIMATION_SPEED), 0),
-                    1
-                );
+                const scrolledPastTrigger = Math.max(0, triggerPoint - sectionTop);
+                
+                const animationZone = sectionHeight / ANIMATION_SPEED;
+                
+                const rawProgress = scrolledPastTrigger / animationZone;
+                const progress = Math.min(Math.max(rawProgress, 0), 1);
 
                 const totalWords = words.length;
                 const wordsToShow = Math.floor(progress * totalWords);
 
                 setVisibleWords(wordsToShow);
+            } else if (sectionTop > triggerPoint) {
+                setVisibleWords(0);
+            } else if (sectionTop + sectionHeight < 0) {
+                setVisibleWords(words.length);
             }
         };
 
