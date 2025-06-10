@@ -22,7 +22,7 @@ const SizingKit = (props: Props) => {
 
     const [areSizesOpen, setAreSizesOpen] = useState(false);
     return (
-        <VariantWrapper title="Size." subtitle="Use the sizing kit to get it right the first time.">
+        <VariantWrapper title="Size." subtitle="Use the sizing kit to get it right the first time." dividerClassName="mt-8">
             <CardWrapper
                 isSelected={size === "kit"}
                 onClick={() => {
@@ -84,7 +84,7 @@ const SizingKit = (props: Props) => {
                     <p className="text-sm text-left tracking-[-0.03em] leading-[1.2] py-4">
                         Not a 100% sure? Go for the sizing kit. Nailing the fit the first time helps you and the Earth.
                     </p>
-                    <div className="grid grid-cols-4 gap-2">
+                    <div className="grid grid-cols-4 gap-2 md:grid-cols-6 lg:grid-cols-7">
                         {availableSizes.map((mapSize) => (
                             <CardWrapper
                                 isSelected={size === mapSize.toString()}

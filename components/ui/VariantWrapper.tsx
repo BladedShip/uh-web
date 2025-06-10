@@ -5,9 +5,10 @@ type Props = {
     subtitle: string;
     children: React.ReactNode;
     className?: string;
+    dividerClassName?: string;
 };
 
-const VariantWrapper = ({ title, subtitle, children, className }: Props) => {
+const VariantWrapper = ({ title, subtitle, children, className, dividerClassName }: Props) => {
     return (
         <div className={cn(`flex flex-col gap-4 pt-4 px-4 w-full`, className)}>
             <h2 className="text-[20px] font-medium tracking-[-0.04em]">
@@ -15,7 +16,7 @@ const VariantWrapper = ({ title, subtitle, children, className }: Props) => {
             </h2>
             {children}
             <div
-                className="border-t border-[#00000012] my-4"
+                className={cn("border-t border-[#00000012] my-4", dividerClassName)}
             />
         </div>
     );
