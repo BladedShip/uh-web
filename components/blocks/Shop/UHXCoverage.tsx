@@ -11,20 +11,16 @@ const UHXCoverage = () => {
     const { product, setCoverage } = useShopContext();
     const selectedCoverage = product.coverage;
 
-    const oneYearFeatures = [
-        "Extra value on trade-in",
-        "Accidental damage protection", 
-        "Priority care"
-    ];
+    const oneYearFeatures = ["Extra value on trade-in", "Accidental damage protection", "Priority care"];
 
     const twoYearFeatures = [
         "Includes all 1 Year Coverage benefits",
         "Theft and loss protection",
-        "Weight loss insurance"
+        "Weight loss insurance",
     ];
 
     return (
-        <VariantWrapper title="UltrahumanX Coverage." subtitle="Protect your new Ring.">
+        <VariantWrapper title="UltrahumanX Coverage." subtitle="Protect your new Ring." data-coverage>
             <div className="flex flex-col gap-4">
                 <CardWrapper
                     isSelected={selectedCoverage === "1-year"}
@@ -66,9 +62,7 @@ const UHXCoverage = () => {
                             selectedCoverage === "2-years" ? "bg-white" : "bg-gray-200"
                         )}
                     >
-                        <p className="text-[8px] font-semibold tracking-[0.2em] leading-[1.2] text-black">
-                            POPULAR
-                        </p>
+                        <p className="text-[8px] font-semibold tracking-[0.2em] leading-[1.2] text-black">POPULAR</p>
                     </div>
                     <div className="w-full pt-3">
                         <div className="flex justify-between items-start w-full mb-2">
@@ -106,10 +100,7 @@ const UHXCoverage = () => {
                     </div>
                 </CardWrapper>
 
-                <CardWrapper
-                    isSelected={selectedCoverage === "none"}
-                    onClick={() => setCoverage("none")}
-                >
+                <CardWrapper isSelected={selectedCoverage === "none"} onClick={() => setCoverage("none")}>
                     <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2] text-center w-full md:text-base">
                         No, I don't want to protect my new Ring AIR
                     </p>

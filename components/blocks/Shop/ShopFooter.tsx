@@ -64,6 +64,13 @@ const ShopFooter = (props: Props) => {
                     boxShadow: "rgb(111, 186, 255) 0px 1px 4px 0px inset",
                 }}
                 onClick={() => {
+                    if (!coverage) {
+                        const coverageElement = document.querySelector("[data-coverage]");
+                        if (coverageElement) {
+                            coverageElement.scrollIntoView({ behavior: "smooth" });
+                        }
+                        return;
+                    }
                     console.log(
                         "Product Prefernces",
                         JSON.stringify({
@@ -78,7 +85,7 @@ const ShopFooter = (props: Props) => {
                     );
                 }}
             >
-                Add to cart
+                {coverage ? "Add to cart" : "Continue"}
             </button>
         </footer>
     );

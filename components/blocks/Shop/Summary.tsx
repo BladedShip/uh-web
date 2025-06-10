@@ -96,7 +96,9 @@ const Summary = () => {
             {/* Total */}
             <div className="flex justify-between items-center mb-2">
                 <span className="text-xl font-semibold">{tradeIn ? "Total due today" : "Total"}</span>
-                <span className="text-xl font-semibold">₹{(tradeIn ? totalPriceValues.originalPrice : totalPriceValues.totalPrice).toLocaleString()}</span>
+                <span className="text-xl font-semibold">
+                    ₹{(tradeIn ? totalPriceValues.originalPrice : totalPriceValues.totalPrice).toLocaleString()}
+                </span>
             </div>
 
             {/* Trade-in credit info */}
@@ -114,9 +116,9 @@ const Summary = () => {
 
             {/* Add to Cart Button */}
             <button
-                className="w-full bg-[#007FF5] text-white py-4 rounded-2xl mb-4"
+                className="w-full bg-[#007FF5] text-white py-4 font-semibold rounded-2xl mb-4 disabled:bg-[#00000033] disabled:border-[#0000000D] disabled:border disabled:cursor-not-allowed disabled:text-[#000000B2] disabled:opacity-50"
                 style={{
-                    boxShadow: "rgb(111, 186, 255) 0px 1px 4px 0px inset",
+                    boxShadow: coverage ? "rgb(111, 186, 255) 0px 1px 4px 0px inset" : "none",
                 }}
                 onClick={() => {
                     console.log(
@@ -132,6 +134,7 @@ const Summary = () => {
                         })
                     );
                 }}
+                disabled={!coverage}
             >
                 Add to cart
             </button>

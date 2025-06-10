@@ -20,8 +20,6 @@ const initialProduct: Product = {
     color: "rt",
     size: "kit",
     charger: "free",
-    powerPlug: "none",
-    coverage: "none",
 };
 
 // Reducer function
