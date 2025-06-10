@@ -33,10 +33,10 @@ const UHXCoverage = () => {
                 >
                     <div className="w-full">
                         <div className="flex justify-between items-center w-full mb-4">
-                            <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2]">
+                            <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2] md:text-base">
                                 1 Year Coverage
                             </p>
-                            <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2]">
+                            <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2] md:text-base">
                                 ₹{PRICE_ADDONS.coverage["1-year"].toLocaleString()}
                             </p>
                         </div>
@@ -45,7 +45,7 @@ const UHXCoverage = () => {
                                 {oneYearFeatures.map((feature, index) => (
                                     <div key={index} className="flex gap-3 items-center">
                                         <CheckMarkIcon className="w-4 h-4 flex-shrink-0" />
-                                        <p className="text-sm tracking-[-0.03em] leading-[1.2]">
+                                        <p className="text-sm tracking-[-0.03em] leading-[1.2] md:text-base">
                                             {feature}
                                         </p>
                                     </div>
@@ -73,7 +73,7 @@ const UHXCoverage = () => {
                     <div className="w-full pt-3">
                         <div className="flex justify-between items-start w-full mb-2">
                             <div className="flex-1">
-                                <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2] text-left">
+                                <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2] text-left md:text-base">
                                     2 Year Coverage
                                 </p>
                                 <div className="mt-1 flex items-center gap-2">
@@ -83,10 +83,10 @@ const UHXCoverage = () => {
                                 </div>
                             </div>
                             <div className="text-right">
-                                <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2]">
+                                <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2] md:text-base">
                                     ₹{PRICE_ADDONS.coverage["2-years"].toLocaleString()}
                                 </p>
-                                <p className="text-xs text-gray-500 tracking-[-0.03em] leading-[1.2]">
+                                <p className="text-xs text-gray-500 tracking-[-0.03em] leading-[1.2] md:text-sm">
                                     (That's just ₹2,220/year)
                                 </p>
                             </div>
@@ -96,7 +96,7 @@ const UHXCoverage = () => {
                                 {twoYearFeatures.map((feature, index) => (
                                     <div key={index} className="flex gap-3 items-center">
                                         <CheckMarkIcon className="w-4 h-4 flex-shrink-0" />
-                                        <p className="text-sm tracking-[-0.03em] leading-[1.2]">
+                                        <p className="text-sm tracking-[-0.03em] leading-[1.2] md:text-base">
                                             {feature}
                                         </p>
                                     </div>
@@ -110,7 +110,7 @@ const UHXCoverage = () => {
                     isSelected={selectedCoverage === "none"}
                     onClick={() => setCoverage("none")}
                 >
-                    <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2] text-center w-full">
+                    <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2] text-center w-full md:text-base">
                         No, I don't want to protect my new Ring AIR
                     </p>
                 </CardWrapper>

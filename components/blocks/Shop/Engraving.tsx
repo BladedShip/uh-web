@@ -28,13 +28,13 @@ const Engraving = () => {
                     >
                         <div className="w-full">
                             <div className="w-full p-4">
-                                <p className="text-sm tracking-[-0.03em] leading-[1.2] font-semibold w-full text-left">
+                                <p className="text-sm tracking-[-0.03em] leading-[1.2] font-semibold w-full text-left md:text-base">
                                     Add engraving
                                 </p>
-                                <p className="text-gray-500 text-sm leading-tight text-left w-full">
+                                <p className="text-gray-500 text-sm leading-tight text-left w-full md:text-base">
                                     Add custom engraving for just ₹{ENGRAVING_PRICE.toLocaleString()} extra
                                     <br />
-                                    <span className="text-xs">*Engraving orders take 7 days longer to ship</span>
+                                    <span className="text-xs md:text-sm">*Engraving orders take 7 days longer to ship</span>
                                 </p>
                             </div>
                             {engravingSelected && (
@@ -68,7 +68,7 @@ const Engraving = () => {
                         setEngraving(undefined);
                     }}
                 >
-                    <span className="text-sm tracking-[-0.03em] leading-[1.2] font-semibold">
+                    <span className="text-sm tracking-[-0.03em] leading-[1.2] font-semibold md:text-base w-full text-left">
                         I don't want the engraving
                     </span>
                 </CardWrapper>

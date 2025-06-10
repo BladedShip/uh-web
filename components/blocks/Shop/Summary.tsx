@@ -61,7 +61,7 @@ const Summary = () => {
             {/* Product Info */}
             <div className="mb-6">
                 <h3 className="text-lg font-semibold mb-1">Ultrahuman Ring AIR</h3>
-                <p className="text-base text-gray-600">
+                <p className="text-base text-gray-600 md:text-lg">
                     {PRICE_ADDONS_LABELS.color[color]}, {size === "kit" ? "Sizing kit included" : `Size ${size}`}
                 </p>
             </div>
@@ -101,13 +101,13 @@ const Summary = () => {
 
             {/* Trade-in credit info */}
             {tradeIn && (
-                <p className="text-sm font-semibold mb-4">
+                <p className="text-sm font-semibold mb-4 md:text-base">
                     Eligible for ₹{totalPriceValues.credits.toLocaleString()} credit post trade in
                 </p>
             )}
 
             {/* Dispatch Info */}
-            <p className="text-sm text-gray-500 mb-6">
+            <p className="text-sm text-gray-500 mb-6 md:text-base">
                 Dispatched by : <span className="font-medium">{formattedDispatchDate}</span>
                 {size === "kit" && <span> (after size selection)</span>}
             </p>
@@ -137,18 +137,18 @@ const Summary = () => {
             </button>
 
             {/* EMI Info */}
-            <p className="text-sm font-semibold text-left mb-8 tracking-[-0.03em] leading-[1.2]">
+            <p className="text-sm font-semibold text-left mb-8 tracking-[-0.03em] leading-[1.2] md:text-base">
                 No cost EMI starting at ₹{emiAmount.toLocaleString()}/month. Free Delivery
             </p>
 
             <div className="border-t border-gray-300 my-4"></div>
 
-            <div className="flex justify-between gap-4 mb-6 pt-2">
+            <div className="flex justify-between gap-4 mb-6 pt-2 md:px-14">
                 <div className="text-center">
                     <div className="w-12 mb-2 mx-auto flex items-center justify-center">
                         <ChargerIcon />
                     </div>
-                    <p className="text-xs text-gray-600">
+                    <p className="text-xs text-gray-600 md:text-sm">
                         Charging cable
                         <br />
                         included
@@ -158,7 +158,7 @@ const Summary = () => {
                     <div className="w-12 mb-2 mx-auto flex items-center justify-center">
                         <BatteryIcon />
                     </div>
-                    <p className="text-xs text-gray-600">
+                    <p className="text-xs text-gray-600 md:text-sm">
                         4 to 6 days of
                         <br />
                         battery life
@@ -168,7 +168,7 @@ const Summary = () => {
                     <div className="w-12 mb-2 mx-auto flex items-center justify-center">
                         <ReturnIcon />
                     </div>
-                    <p className="text-xs text-gray-600">30-day return</p>
+                    <p className="text-xs text-gray-600 md:text-sm">30-day return</p>
                 </div>
             </div>
 
@@ -178,7 +178,7 @@ const Summary = () => {
                     <PlantIcon />
                 </div>
                 <div>
-                    <p className="text-xs">
+                    <p className="text-xs md:text-sm">
                         <span className="font-extrabold">Building for a healthier planet.</span> For every order you
                         place this month, Ultrahuman plants a tree where it's needed most.
                     </p>

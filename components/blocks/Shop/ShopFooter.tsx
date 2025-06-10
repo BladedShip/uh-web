@@ -27,11 +27,11 @@ const ShopFooter = (props: Props) => {
                     <span className="text-lg">›</span>
                 </button>
                 <div className="text-right">
-                    <p className="text-md font-bold">
+                    <p className="text-md font-bold md:text-lg">
                         ₹{(tradeIn ? totalPriceValues.originalPrice : totalPriceValues.totalPrice).toLocaleString()} {tradeIn ? "due today" : ""}
                     </p>
                     {tradeIn ? (
-                        <p className="text-xs text-gray-500 font-normal">
+                        <p className="text-xs text-gray-500 font-normal md:text-sm">
                             ₹{totalPriceValues.totalPrice.toLocaleString()} (after trade in, Tax incl)
                         </p>
                     ) : (

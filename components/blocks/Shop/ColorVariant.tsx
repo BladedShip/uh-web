@@ -27,7 +27,7 @@ const ColorVariant = (props: Props) => {
                                 alt={mapColor}
                                 className="w-18 h-18 object-cover"
                             />
-                            <p className="font-semibold text-base">
+                            <p className="font-semibold text-base md:text-md">
                                 {PRICE_ADDONS_LABELS.color[mapColor as keyof typeof PRICE_ADDONS_LABELS.color]}
                             </p>
                         </div>

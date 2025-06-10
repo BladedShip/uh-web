@@ -73,10 +73,10 @@ const Header = () => {
 
             <div className="">
                 <h1 className="text-[40px] font-semibold tracking-[-0.02em] leading-tight mb-1">Ring AIR</h1>
-                <p className="text-[28px] tracking-[-0.02em] leading-tight mb-6">
+                <p className="text-[28px] tracking-[-0.02em] leading-tight mb-6 md:text-[32px]">
                     ₹{BASE_PRICE.toLocaleString()}
                 </p>
-                <p className="text-sm mb-8 font-normal">
+                <p className="text-sm mb-8 font-normal md:text-base">
                     Dispatched by : <span className="font-semibold">{formattedDispatchDate}</span>
                     {size === "kit" && <span> (after size selection)</span>}
                 </p>
@@ -98,7 +98,7 @@ const Header = () => {
                                 className="bg-gray-100 rounded-lg px-4 py-4 flex items-center gap-2 w-[80%] flex-shrink-0 justify-between"
                                 style={{ scrollSnapAlign: "start" }}
                             >
-                                <p className="text-sm font-medium text-gray-800">{message}</p>
+                                <p className="text-sm font-medium text-gray-800 md:text-base">{message}</p>
                                 <PlusIcon />
                             </div>
                         ))}

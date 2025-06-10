@@ -20,13 +20,13 @@ const Charger = (props: Props) => {
                     NEW
                 </p>
                 <img src="/shop/charger.avif" className="w-[200px] h-[150px] object-cover" />
-                <p className="font-semibold text-left text-sm pt-2 w-full">Get the Voyager Ring Charger at ₹3,799</p>
-                <p className="text-sm text-left tracking-[-0.03em] leading-[1.2] text-gray-500">
+                <p className="font-semibold text-left text-sm pt-2 w-full md:text-base">Get the Voyager Ring Charger at ₹3,799</p>
+                <p className="text-sm text-left tracking-[-0.03em] leading-[1.2] text-gray-500 md:text-base">
                     A compact, powerful, and lightweight charger, engineered for the adventurer in you.
                 </p>
             </CardWrapper>
             <CardWrapper isSelected={isChargerSelected === "free"} onClick={() => setCharger("free")}>
-                <p className="text-sm text-left tracking-[-0.03em] leading-[1.2] font-semibold w-full">
+                <p className="text-sm text-left tracking-[-0.03em] leading-[1.2] font-semibold w-full md:text-base">
                     Free Standard Charger
                 </p>
             </CardWrapper>

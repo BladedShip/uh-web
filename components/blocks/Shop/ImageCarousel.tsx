@@ -92,7 +92,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ autoplay = false, autopla
                 aria-label="View real life images"
             >
                 <ImageIcon className="w-3 h-3 text-black" />
-                <p className="text-black font-medium text-sm">View real life images</p>
+                <p className="text-black font-medium text-sm md:text-base">View real life images</p>
             </button>
         </div>
     );

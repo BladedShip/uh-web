@@ -12,7 +12,7 @@ const PowerPlug = () => {
 
     return (
         <VariantWrapper title="PowerPlug." subtitle="Protect your heart health.">
-            <p className="text-sm text-gray-500 tracking-[-0.03em] leading-[1.2] mb-4">
+            <p className="text-sm text-gray-500 tracking-[-0.03em] leading-[1.2] mb-4 md:text-base">
                 Monitor night time heart trends to evaluate your heart's response to stressors.
             </p>
 
@@ -23,10 +23,10 @@ const PowerPlug = () => {
                     className="justify-between overflow-hidden"
                 >
                     <div className="flex justify-between items-center w-full">
-                        <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2]">
+                        <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2] md:text-base">
                             Cardio Adaptability - 1 Year
                         </p>
-                        <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2]">
+                        <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2] md:text-base">
                             ₹{PRICE_ADDONS.powerPlug["cardio-1"].toLocaleString()}
                         </p>
                     </div>
@@ -49,10 +49,10 @@ const PowerPlug = () => {
                     </div>
                     <div className="w-full pt-3">
                         <div className="flex justify-between items-center w-full">
-                            <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2]">
+                            <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2] md:text-base">
                                 Cardio Adaptability - 2 Year
                             </p>
-                            <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2]">
+                            <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2] md:text-base">
                                 ₹{PRICE_ADDONS.powerPlug["cardio-2"].toLocaleString()}
                             </p>
                         </div>
@@ -65,7 +65,7 @@ const PowerPlug = () => {
                 </CardWrapper>
 
                 <CardWrapper isSelected={selectedPowerPlug === "none"} onClick={() => setPowerPlug("none")}>
-                    <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2] text-center w-full text-left">
+                    <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2] text-center w-full text-left md:text-base">
                         No, I don't want proactive heart monitoring
                     </p>
                 </CardWrapper>
