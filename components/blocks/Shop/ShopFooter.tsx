@@ -27,7 +27,7 @@ const ShopFooter = (props: Props) => {
     const totalPriceWithBase = BASE_PRICE + addonsPrice;
 
     return (
-        <footer className="bg-[#F5F5F5] p-2 absolute bottom-0 w-full flex flex-col">
+        <footer className="bg-[#F5F5F5] p-2 sticky bottom-0 w-full flex flex-col">
             <div className="flex gap-2 justify-between py-2">
                 <p className="text-sm text-gray-500 font-medium">Total</p>
                 <p className="text-md font-bold">

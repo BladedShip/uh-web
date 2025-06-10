@@ -1,3 +1,4 @@
 import SectionWrapper from "./SectionWrapper";
+import VariantWrapper from "./VariantWrapper";
 
-export { SectionWrapper };
+export { SectionWrapper, VariantWrapper };

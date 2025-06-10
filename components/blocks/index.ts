@@ -1,9 +1,22 @@
-import HeroSection from "./Hero";
-import AboutSection from "./About";
-import FeaturesSection from "./Features";
-import EvenMoreFeatures from "./EvenMoreFeatures";
-import MoreFeatures from "./MoreFeatures";
-import ShopFooter from "./ShopFooter";
-import ImageCarousel from "./ImageCarousel";
+// Home
+import HeroSection from "./Home/Hero";
+import AboutSection from "./Home/About";
+import FeaturesSection from "./Home/Features";
+import EvenMoreFeatures from "./Home/EvenMoreFeatures";
+import MoreFeatures from "./Home/MoreFeatures";
 
-export { HeroSection, AboutSection, FeaturesSection, EvenMoreFeatures, MoreFeatures, ShopFooter, ImageCarousel };
+// Shop
+import ImageCarousel from "./Shop/ImageCarousel";
+import ShopFooter from "./Shop/ShopFooter";
+import ColorVariant from "./Shop/ColorVariant";
+
+export {
+    HeroSection,
+    AboutSection,
+    FeaturesSection,
+    EvenMoreFeatures,
+    MoreFeatures,
+    ImageCarousel,
+    ShopFooter,
+    ColorVariant,
+};
