@@ -112,9 +112,7 @@ const StatCard = ({
                 <p className="font-semibold text-[32px] md:text-[74px] leading-[100px] md:leading-[70px] tracking-[-1px]">
                     {value}
                 </p>
-                <p className="font-normal text-[18px] md:text-[22px] leading-[26px] tracking-[0px]">
-                    {description}
-                </p>
+                <p className="font-normal text-[18px] md:text-[22px] leading-[26px] tracking-[0px]">{description}</p>
             </div>
         </div>
     );
