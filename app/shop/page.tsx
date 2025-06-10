@@ -1,4 +1,15 @@
-import { ColorVariant, ImageCarousel, ShopFooter } from "@/components/blocks";
+import {
+    ColorVariant,
+    Engraving,
+    ImageCarousel,
+    PowerPlug,
+    ShopFooter,
+    SizingKit,
+    TradeIn,
+    UHXCoverage,
+    Charger,
+    Summary,
+} from "@/components/blocks";
 
 // The font used in this page is Graphik, currently usinf default Inter
 
@@ -9,7 +20,16 @@ const ShopPage = (props: Props) => {
         <div className="">
             <div className="flex flex-col md:flex-row md:h-screen justify-start items-start">
                 <ImageCarousel />
-                <ColorVariant />
+                <div>
+                    <ColorVariant />
+                    <SizingKit />
+                    <Charger />
+                    <TradeIn />
+                    <Engraving />
+                    <PowerPlug />
+                    <UHXCoverage />
+                    <Summary />
+                </div>
             </div>
             <ShopFooter />
         </div>

@@ -9,6 +9,13 @@ import MoreFeatures from "./Home/MoreFeatures";
 import ImageCarousel from "./Shop/ImageCarousel";
 import ShopFooter from "./Shop/ShopFooter";
 import ColorVariant from "./Shop/ColorVariant";
+import SizingKit from "./Shop/SizingKit";
+import Charger from "./Shop/Charger";
+import TradeIn from "./Shop/TradeIn";
+import Engraving from "./Shop/Engraving";
+import PowerPlug from "./Shop/PowerPlug";
+import UHXCoverage from "./Shop/UHXCoverage";
+import Summary from "./Shop/Summary";
 
 export {
     HeroSection,
@@ -19,4 +26,11 @@ export {
     ImageCarousel,
     ShopFooter,
     ColorVariant,
+    SizingKit,
+    Charger,
+    TradeIn,
+    Engraving,
+    PowerPlug,
+    UHXCoverage,
+    Summary,
 };

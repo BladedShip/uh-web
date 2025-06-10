@@ -1,7 +1,6 @@
 "use client";
 
-import { VariantWrapper } from "@/components/ui";
-import CardWrapper from "@/components/ui/CardWrapper";
+import { VariantWrapper, CardWrapper } from "@/components/ui";
 import { PRICE_ADDONS_LABELS } from "@/constants";
 import { useShopContext } from "@/context";
 
