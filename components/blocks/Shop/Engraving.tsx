@@ -68,7 +68,7 @@ const Engraving = () => {
                         setEngraving(undefined);
                     }}
                 >
-                    <span className="text-sm tracking-[-0.03em] leading-[1.2] font-semibold w-full text-left">
+                    <span className="text-sm tracking-[-0.03em] leading-[1.2] font-semibold">
                         I don't want the engraving
                     </span>
                 </CardWrapper>
