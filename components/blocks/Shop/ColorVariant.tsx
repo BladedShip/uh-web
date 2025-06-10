@@ -13,7 +13,7 @@ const ColorVariant = (props: Props) => {
     const colors = Object.keys(PRICE_ADDONS_LABELS.color);
 
     return (
-        <VariantWrapper title="Color." subtitle="Choose a finish that suits your style.">
+        <VariantWrapper title="Color." subtitle="Choose a finish that suits your style." className="pt-8">
             <div className="grid grid-cols-2 gap-4">
                 {colors.map((mapColor) => (
                     <CardWrapper
@@ -22,7 +22,11 @@ const ColorVariant = (props: Props) => {
                         onClick={() => setColor(mapColor as keyof typeof PRICE_ADDONS_LABELS.color)}
                     >
                         <div className="flex flex-col gap-2 items-center">
-                            <img src={`/shop/rings/${mapColor}.avif`} alt={mapColor} className="w-18 h-18 object-cover" />
+                            <img
+                                src={`/shop/rings/${mapColor}.avif`}
+                                alt={mapColor}
+                                className="w-18 h-18 object-cover"
+                            />
                             <p className="font-semibold text-base">
                                 {PRICE_ADDONS_LABELS.color[mapColor as keyof typeof PRICE_ADDONS_LABELS.color]}
                             </p>

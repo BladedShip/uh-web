@@ -16,6 +16,7 @@ import Engraving from "./Shop/Engraving";
 import PowerPlug from "./Shop/PowerPlug";
 import UHXCoverage from "./Shop/UHXCoverage";
 import Summary from "./Shop/Summary";
+import Header from "./Shop/Header";
 
 export {
     HeroSection,
@@ -33,4 +34,5 @@ export {
     PowerPlug,
     UHXCoverage,
     Summary,
+    Header,
 };
