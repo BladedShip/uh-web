@@ -5,35 +5,39 @@ import { PRICE_ADDONS_LABELS, PRICE_ADDONS } from "@/constants";
 
 type Props = {};
 
-const BASE_PRICE = 28499;
-
 const ShopFooter = (props: Props) => {
-    const { product } = useShopContext();
+    const { product, totalPriceValues } = useShopContext();
     const { color, charger, tradeIn, engraving, powerPlug, coverage } = product;
 
-    const addonsPrice = Object.keys(PRICE_ADDONS).reduce((acc, key) => {
-        if (product[key as keyof typeof product]) {
-            const productValue = product[key as keyof typeof product];
-            if (productValue) {
-                const priceAddonCategory = PRICE_ADDONS[key as keyof typeof PRICE_ADDONS];
-                const additionalPrice = priceAddonCategory[productValue as keyof typeof priceAddonCategory];
-                if (additionalPrice <= 0) return acc;
-                return acc + additionalPrice;
-            }
+    const scrollToSummary = () => {
+        const summaryElement = document.querySelector('[data-summary]');
+        if (summaryElement) {
+            summaryElement.scrollIntoView({ behavior: 'smooth' });
         }
-        return acc;
-    }, 0);
-
-    const totalPriceWithBase = BASE_PRICE + addonsPrice;
+    };
 
     return (
         <footer className="bg-[#F5F5F5] p-2 sticky bottom-0 w-full flex flex-col">
             <div className="flex gap-2 justify-between py-2">
-                <p className="text-sm text-gray-500 font-medium">Total</p>
-                <p className="text-md font-bold">
-                    {`₹${totalPriceWithBase.toLocaleString()}`}
-                    <span className="text-sm text-gray-500 font-normal">{` (Tax incl.)`}</span>
-                </p>
+                <button 
+                    onClick={scrollToSummary}
+                    className="text-sm text-gray-500 font-medium flex items-center gap-1 hover:text-gray-700"
+                >
+                    Show Breakup 
+                    <span className="text-lg">›</span>
+                </button>
+                <div className="text-right">
+                    <p className="text-md font-bold">
+                        ₹{(tradeIn ? totalPriceValues.originalPrice : totalPriceValues.totalPrice).toLocaleString()} {tradeIn ? "due today" : ""}
+                    </p>
+                    {tradeIn ? (
+                        <p className="text-xs text-gray-500 font-normal">
+                            ₹{totalPriceValues.totalPrice.toLocaleString()} (after trade in, Tax incl)
+                        </p>
+                    ) : (
+                        <span className="text-xs text-gray-500 font-normal">(Tax incl.)</span>
+                    )}
+                </div>
             </div>
             <button
                 className="bg-[#007FF5] w-full px-[20px] py-[14px] rounded-[16px] text-white"

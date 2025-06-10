@@ -63,6 +63,7 @@ type ShopContextType = {
     totalPriceValues: {
         basePrice: number;
         addonsPrice: number;
+        originalPrice: number;
         totalPrice: number;
         credits: number;
     };
@@ -76,9 +77,14 @@ const ShopProvider = ({ children }: { children: React.ReactNode }) => {
         if (product[key as keyof typeof product]) {
             const productValue = product[key as keyof typeof product];
             if (productValue) {
+                // Special handling for engraving since it's stored as string but priced as boolean
+                if (key === 'engraving') {
+                    return acc + PRICE_ADDONS.engraving.true;
+                }
+                
                 const priceAddonCategory = PRICE_ADDONS[key as keyof typeof PRICE_ADDONS];
                 const additionalPrice = priceAddonCategory[productValue as keyof typeof priceAddonCategory];
-                if (additionalPrice <= 0) return acc;
+                if (additionalPrice === undefined || additionalPrice <= 0) return acc;
                 return acc + additionalPrice;
             }
         }
@@ -87,7 +93,8 @@ const ShopProvider = ({ children }: { children: React.ReactNode }) => {
     const totalPriceValues = {
         basePrice: BASE_PRICE,
         addonsPrice: addonsPrice,
-        totalPrice: BASE_PRICE + addonsPrice,
+        originalPrice: BASE_PRICE + addonsPrice,
+        totalPrice: BASE_PRICE + addonsPrice - (product.tradeIn ? Math.abs(PRICE_ADDONS.tradeIn[product.tradeIn]) : 0),
         credits: product.tradeIn ? Math.abs(PRICE_ADDONS.tradeIn[product.tradeIn]) : 0,
     };
 

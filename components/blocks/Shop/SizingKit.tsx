@@ -88,6 +88,7 @@ const SizingKit = (props: Props) => {
                         {availableSizes.map((mapSize) => (
                             <CardWrapper
                                 isSelected={size === mapSize.toString()}
+                                key={mapSize}
                                 onClick={() =>
                                     setSize(
                                         mapSize.toString() as
