@@ -1,10 +1,13 @@
-import { HeroSection, AboutSection } from "@/components/blocks";
+import { HeroSection, AboutSection, FeaturesSection, MoreFeatures, EvenMoreFeatures } from "@/components/blocks";
 
 const Home = () => {
     return (
         <>
             <HeroSection />
             <AboutSection />
+            <FeaturesSection />
+            <MoreFeatures />
+            <EvenMoreFeatures />
         </>
     );
 };
