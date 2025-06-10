@@ -14,7 +14,7 @@ const ColorVariant = (props: Props) => {
 
     return (
         <VariantWrapper title="Color." subtitle="Choose a finish that suits your style." className="pt-8">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
                 {colors.map((mapColor) => (
                     <CardWrapper
                         key={mapColor}

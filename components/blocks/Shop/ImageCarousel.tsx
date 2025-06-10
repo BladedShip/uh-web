@@ -55,18 +55,18 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ autoplay = false, autopla
     };
 
     return (
-        <div className="relative w-full">
+        <div className="relative w-full aspect-[4/3] md:aspect-[5/4] md:sticky top-0">
             {/* Main Carousel */}
-            <div className="relative aspect-[4/3] md:aspect-square overflow-hidden" ref={emblaRef}>
+            <div className="relative h-full overflow-hidden" ref={emblaRef}>
                 <div className="flex h-full">
                     {imageIndexes.map((imageIndex, index) => {
                         const imageSrc = generateImageSrc(imageIndex);
                         return (
                             <div
                                 key={index}
-                                className="h-full flex items-center justify-center flex-shrink-0 w-[95%] md:w-full px-[3px] md:px-0"
+                                className="h-full flex-shrink-0 w-[95%] md:w-full px-[3px] md:px-0"
                             >
-                                <div className="relative aspect-[4/3] md:aspect-square w-full h-full overflow-hidden">
+                                <div className="relative w-full h-full overflow-hidden">
                                     <img
                                         src={imageSrc}
                                         alt={`Carousel image ${index + 1}`}
@@ -88,7 +88,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ autoplay = false, autopla
             {/* View Real Life Images Button */}
             <button
                 onClick={handleViewRealLifeImages}
-                className="absolute bottom-4 left-4 bg-white rounded-full px-4 py-2 flex items-center space-x-2.5 z-30"
+                className="absolute bottom-4 left-4 md:bottom-8 bg-white rounded-full px-4 py-2 flex items-center space-x-2.5 z-30"
                 aria-label="View real life images"
             >
                 <ImageIcon className="w-3 h-3 text-black" />

@@ -18,13 +18,18 @@ type Props = {};
 
 const ShopPage = (props: Props) => {
     return (
-        <div className="">
-            <div className="flex flex-col md:flex-row md:h-screen justify-start items-start">
+        <div className="min-h-screen md:h-screen md:flex md:flex-col">
+            <div className="flex flex-col md:flex-row md:flex-1 md:min-h-0 justify-start items-start">
                 <div className="w-full block md:hidden">
                     <Header />
                 </div>
-                <ImageCarousel />
-                <div>
+                <div className="md:h-full md:flex-[3]">
+                    <ImageCarousel />
+                </div>
+                <div className="md:h-full md:flex-[2] md:overflow-y-auto">
+                    <div className="w-full hidden md:block">
+                        <Header />
+                    </div>
                     <ColorVariant />
                     <SizingKit />
                     <Charger />
