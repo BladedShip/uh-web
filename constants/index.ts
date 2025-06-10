@@ -75,4 +75,61 @@ const EVEN_MORE_FEATURES: EvenMoreFeature[] = [
     },
 ];
 
-export { FEATURES, MORE_FEATURES, EVEN_MORE_FEATURES };
+const PRICE_ADDONS = {
+    charger: {
+        voyager: 3799,
+        free: 0,
+    },
+    tradeIn: {
+        "uh-air": -7200,
+        "uh-r1": -5400,
+        "og-3": -4200,
+        "og-2": -2100,
+    },
+    engraving: {
+        true: 3299,
+        false: 0,
+    },
+    powerPlug: {
+        "cardio-1": 2499,
+        "cardio-2": 3998,
+        none: 0,
+    },
+    coverage: {
+        "2-years": 4400,
+        "1-year": 2988,
+        none: 0,
+    },
+};
+
+const PRICE_ADDONS_LABELS = {
+    charger: {
+        voyager: "Voyager",
+        free: "Free",
+    },
+    tradeIn: {
+        "uh-air": "Ultrahuman Ring AIR",
+        "uh-r1": "Ultrahuman Ring R1",
+        "og-3": "Oura Gen-3",
+        "og-2": "Oura G-2",
+    },
+    color: {
+        rt: "Raw Titanium",
+        ab: "Aster Black",
+        mg: "Matte Grey",
+        bg: "Bionic Gold",
+        ss: "Space Silver",
+    },
+    powerPlug: {
+        "cardio-1": "Cardio Adaptability - 1 Year",
+        "cardio-2": "Cardio Adaptability - 2 Years",
+        none: "None",
+    },
+    coverage: {
+        "2-years": "2 Years Coverage",
+        "1-year": "1 Year Coverage",
+        none: "None",
+    },
+};
+
+export { FEATURES, MORE_FEATURES, EVEN_MORE_FEATURES, PRICE_ADDONS, PRICE_ADDONS_LABELS };

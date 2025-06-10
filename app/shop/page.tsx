@@ -1,9 +1,18 @@
-import React from "react";
+import { ImageCarousel, ShopFooter } from "@/components/blocks";
+
+// The font used in this page is Graphik, currently usinf default Inter
 
 type Props = {};
 
 const ShopPage = (props: Props) => {
-    return <div className="flex flex-col md:flex-row"></div>;
+    return (
+        <div className="">
+            <div className="flex flex-col md:flex-row md:h-screen justify-start items-start">
+                <ImageCarousel />
+            </div>
+            <ShopFooter />
+        </div>
+    );
 };
 
 export default ShopPage;
