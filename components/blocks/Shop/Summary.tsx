@@ -56,7 +56,7 @@ const Summary = () => {
     return (
         <div className="bg-[#F5F5F5] rounded-2xl p-6 mx-4 mb-6" data-summary>
             {/* Header */}
-            <h2 className="text-2xl font-medium tracking-[-0.04em] mb-6">Almost there. Here's your order summary.</h2>
+            <h2 className="text-2xl font-medium tracking-[-0.04em] mb-6">Almost there. Here&apos;s your order summary.</h2>
 
             {/* Product Info */}
             <div className="mb-6">
@@ -183,7 +183,7 @@ const Summary = () => {
                 <div>
                     <p className="text-xs md:text-sm">
                         <span className="font-extrabold">Building for a healthier planet.</span> For every order you
-                        place this month, Ultrahuman plants a tree where it's needed most.
+                        place this month, Ultrahuman plants a tree where it&apos;s needed most.
                     </p>
                 </div>
             </div>

@@ -1,13 +1,11 @@
 "use client";
 
 import { useShopContext } from "@/context";
-import { PRICE_ADDONS_LABELS, PRICE_ADDONS } from "@/constants";
+import { PRICE_ADDONS_LABELS } from "@/constants";
 import { DispatchIcon } from "@/components/icons";
 import { cn } from "@/utils";
 
-type Props = {};
-
-const ShopFooter = (props: Props) => {
+const ShopFooter = () => {
     const { product, totalPriceValues } = useShopContext();
     const { color, charger, tradeIn, engraving, powerPlug, coverage, size } = product;
 

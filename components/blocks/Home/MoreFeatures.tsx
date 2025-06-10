@@ -2,8 +2,6 @@ import { SectionWrapper } from "@/components/ui";
 import { MORE_FEATURES } from "@/constants";
 import Link from "next/link";
 
-type Props = {};
-
 const MoreFeatureCard = ({ title, description, image, link }: MoreFeature) => (
     // Able to get away with static mb on md for now because there are only 2 cards
     <div className="relative mb-[45vw] md:mb-24">
@@ -31,7 +29,7 @@ const MoreFeatureCard = ({ title, description, image, link }: MoreFeature) => (
     </div>
 );
 
-const MoreFeatures = (props: Props) => {
+const MoreFeatures = () => {
     return (
         <SectionWrapper id="features" dynamicHeight>
             <div className="max-w-7xl mx-auto px-4 lg:px-8 w-full mb-16 md:mb-28">

@@ -81,7 +81,7 @@ const UHXCoverage = () => {
                                     ₹{PRICE_ADDONS.coverage["2-years"].toLocaleString()}
                                 </p>
                                 <p className="text-xs text-gray-500 tracking-[-0.03em] leading-[1.2] md:text-sm">
-                                    (That's just ₹2,220/year)
+                                    (That&apos;s just ₹2,220/year)
                                 </p>
                             </div>
                         </div>
@@ -102,7 +102,7 @@ const UHXCoverage = () => {
 
                 <CardWrapper isSelected={selectedCoverage === "none"} onClick={() => setCoverage("none")}>
                     <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2] text-center w-full md:text-base">
-                        No, I don't want to protect my new Ring AIR
+                        No, I don&apos;t want to protect my new Ring AIR
                     </p>
                 </CardWrapper>
             </div>

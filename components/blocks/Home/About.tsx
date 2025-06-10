@@ -5,9 +5,7 @@ import { SectionWrapper } from "@/components/ui";
 const ANIMATION_SPEED = 0.7;
 const TRIGGER_POINT = 0.7;
 
-type Props = {};
-
-const AboutSection = (props: Props) => {
+const AboutSection = () => {
     const [visibleWords, setVisibleWords] = useState(0);
     const sectionRef = useRef<HTMLDivElement>(null);
 

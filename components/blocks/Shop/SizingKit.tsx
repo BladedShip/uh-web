@@ -7,9 +7,7 @@ import { useShopContext } from "@/context";
 import { CheckMarkIcon, ChevronRightIcon, DispatchIcon } from "@/components/icons";
 import { cn } from "@/utils";
 
-type Props = {};
-
-const SizingKit = (props: Props) => {
+const SizingKit = () => {
     const { product, setSize } = useShopContext();
     const { size } = product;
     const sizingFeatures = [

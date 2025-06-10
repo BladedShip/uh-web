@@ -7,9 +7,7 @@ import { cn } from "@/utils";
 import { PRICE_ADDONS_LABELS } from "@/constants";
 import { CheckMarkGreenIcon } from "@/components/icons";
 
-type Props = {};
-
-const TradeIn = (props: Props) => {
+const TradeIn = () => {
     const { product, setTradeIn, totalPriceValues } = useShopContext();
     const [tradeInSelected, setTradeInSelected] = useState<boolean>(false);
     const selectedTradeIn = product.tradeIn;

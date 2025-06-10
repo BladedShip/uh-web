@@ -69,7 +69,7 @@ const Engraving = () => {
                     }}
                 >
                     <span className="text-sm tracking-[-0.03em] leading-[1.2] font-semibold md:text-base w-full text-left">
-                        I don't want the engraving
+                        I don&apos;t want the engraving
                     </span>
                 </CardWrapper>
             </div>

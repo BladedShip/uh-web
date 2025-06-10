@@ -2,9 +2,7 @@ import { SectionWrapper } from "@/components/ui";
 import { EVEN_MORE_FEATURES } from "@/constants";
 import { cn } from "@/utils";
 
-type Props = {};
-
-const EvenMoreFeatures = (props: Props) => {
+const EvenMoreFeatures = () => {
     return (
         <SectionWrapper id="features" className="p-0 py-0 px-0 mb-28">
             <div className="md:max-w-7xl md:mx-auto md:grid md:grid-cols-3 md:gap-14 md:mb-28 mb-4 md:px-8">

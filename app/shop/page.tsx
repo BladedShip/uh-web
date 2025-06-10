@@ -14,9 +14,7 @@ import {
 
 // The font used in this page is Graphik, currently usinf default Inter
 
-type Props = {};
-
-const ShopPage = (props: Props) => {
+const ShopPage = () => {
     return (
         <div className="min-h-screen md:h-screen md:flex md:flex-col">
             <div className="flex flex-col md:flex-row md:flex-1 md:min-h-0 justify-start items-start">

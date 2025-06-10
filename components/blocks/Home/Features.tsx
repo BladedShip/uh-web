@@ -5,15 +5,13 @@ import { FEATURES } from "@/constants";
 import { useRef, useEffect, useState, useCallback, useMemo } from "react";
 import React from "react";
 
-type Props = {};
-
 const SCROLL_INTERVAL = 10000;
 const THROTTLE_DELAY = 16; // ~60fps
 
-const throttle = (func: Function, delay: number) => {
+const throttle = (func: (...args: unknown[]) => void, delay: number) => {
     let timeoutId: NodeJS.Timeout | null = null;
     let lastExecTime = 0;
-    return (...args: any[]) => {
+    return (...args: unknown[]) => {
         const currentTime = Date.now();
 
         if (currentTime - lastExecTime > delay) {
@@ -81,6 +79,8 @@ const FeatureCard = React.memo(
     }
 );
 
+FeatureCard.displayName = 'FeatureCard';
+
 const ProgressBar = React.memo(({ active }: { active: boolean }) => {
     const [shouldAnimate, setShouldAnimate] = useState(false);
 
@@ -111,6 +111,8 @@ const ProgressBar = React.memo(({ active }: { active: boolean }) => {
         </div>
     );
 });
+
+ProgressBar.displayName = 'ProgressBar';
 
 const useAutoScroll = (
     scrollRef: React.RefObject<HTMLDivElement | null>,
@@ -191,7 +193,7 @@ const useAutoScroll = (
                 isUserScrollingRef.current = false;
             }, 100);
         }, THROTTLE_DELAY),
-        [startAutoScroll, onActiveChange]
+        [startAutoScroll, onActiveChange, scrollRef]
     );
 
     return { scrollToCard, handleUserScroll, startAutoScroll };
@@ -220,7 +222,7 @@ const useIsDesktop = () => {
     return isDesktop;
 };
 
-const FeaturesSection = (props: Props) => {
+const FeaturesSection = () => {
     const scrollRef = useRef<HTMLDivElement>(null);
     const [activeIdx, setActiveIdx] = useState(0);
     const isDesktop = useIsDesktop();

@@ -4,9 +4,7 @@ import { VariantWrapper, CardWrapper } from "@/components/ui";
 import { PRICE_ADDONS_LABELS } from "@/constants";
 import { useShopContext } from "@/context";
 
-type Props = {};
-
-const ColorVariant = (props: Props) => {
+const ColorVariant = () => {
     const { product, setColor } = useShopContext();
     const { color } = product;
 

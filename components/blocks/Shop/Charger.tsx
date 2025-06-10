@@ -4,9 +4,7 @@ import { CardWrapper, VariantWrapper } from "@/components/ui";
 import { useShopContext } from "@/context";
 import React from "react";
 
-type Props = {};
-
-const Charger = (props: Props) => {
+const Charger = () => {
     const { product, setCharger } = useShopContext();
     const isChargerSelected = product.charger;
     return (
@@ -19,7 +17,7 @@ const Charger = (props: Props) => {
                 <p className="absolute top-1 right-1 bg-[#0EFF6E] px-[5px] py-[2px] text-xs font-semibold tracking-[0.1em] leading-[1.2] rounded-sm">
                     NEW
                 </p>
-                <img src="/shop/charger.avif" className="w-[200px] h-[150px] object-cover" />
+                <img src="/shop/charger.avif" alt="Voyager Ring Charger" className="w-[200px] h-[150px] object-cover" />
                 <p className="font-semibold text-left text-sm pt-2 w-full md:text-base">Get the Voyager Ring Charger at ₹3,799</p>
                 <p className="text-sm text-left tracking-[-0.03em] leading-[1.2] text-gray-500 md:text-base">
                     A compact, powerful, and lightweight charger, engineered for the adventurer in you.

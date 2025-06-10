@@ -13,7 +13,7 @@ const PowerPlug = () => {
     return (
         <VariantWrapper title="PowerPlug." subtitle="Protect your heart health.">
             <p className="text-sm text-gray-500 tracking-[-0.03em] leading-[1.2] mb-4 md:text-base">
-                Monitor night time heart trends to evaluate your heart's response to stressors.
+                Monitor night time heart trends to evaluate your heart&apos;s response to stressors.
             </p>
 
             <div className="flex flex-col gap-4">
@@ -66,7 +66,7 @@ const PowerPlug = () => {
 
                 <CardWrapper isSelected={selectedPowerPlug === "none"} onClick={() => setPowerPlug("none")}>
                     <p className="text-sm font-semibold tracking-[-0.03em] leading-[1.2] text-center w-full text-left md:text-base">
-                        No, I don't want proactive heart monitoring
+                        No, I don&apos;t want proactive heart monitoring
                     </p>
                 </CardWrapper>
             </div>
