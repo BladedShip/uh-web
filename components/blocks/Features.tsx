@@ -31,15 +31,15 @@ const throttle = (func: Function, delay: number) => {
 
 const FeatureCard = React.memo(
     ({ title, description, image, tags, features, active }: Feature & { active: boolean }) => (
-        <div 
-            className="bg-white p-0 overflow-hidden shadow-none md:min-w-full md:snap-start md:flex md:flex-row-reverse md:gap-8 md:mt-20"
-            style={{ contain: 'layout style paint' }}
+        <div
+            className="bg-white p-0 overflow-hidden shadow-none md:min-w-full md:snap-start md:flex md:flex-row-reverse md:gap-8"
+            style={{ contain: "layout style paint" }}
         >
             <div className="relative w-full flex items-center justify-center bg-black rounded-[16px] md:w-3/5 md:flex-shrink-0">
                 <img
                     src={image}
                     alt={title}
-                    className="object-contain w-full rounded-2xl aspect-[1.45/1] md:aspect-[1.43/1]"
+                    className="object-contain w-full rounded-2xl aspect-[1.45] md:aspect-[1.43]"
                     loading="lazy"
                     decoding="async"
                 />
@@ -111,8 +111,6 @@ const ProgressBar = React.memo(({ active }: { active: boolean }) => {
         </div>
     );
 });
-
-
 
 const useAutoScroll = (
     scrollRef: React.RefObject<HTMLDivElement | null>,
@@ -202,7 +200,7 @@ const useAutoScroll = (
 // Optimized desktop detection with reduced re-renders
 const useIsDesktop = () => {
     const [isDesktop, setIsDesktop] = useState(() => {
-        if (typeof window !== 'undefined') {
+        if (typeof window !== "undefined") {
             return window.matchMedia("(min-width: 768px)").matches;
         }
         return false;
@@ -210,7 +208,7 @@ const useIsDesktop = () => {
 
     useEffect(() => {
         const media = window.matchMedia("(min-width: 768px)");
-        
+
         const handleChange = (e: MediaQueryListEvent) => {
             setIsDesktop(e.matches);
         };
@@ -248,17 +246,17 @@ const FeaturesSection = (props: Props) => {
     }, [isDesktop, handleUserScroll, startAutoScroll]);
 
     return (
-        <SectionWrapper id="features">
+        <SectionWrapper id="features" dynamicHeight>
             <div className="max-w-7xl mx-auto px-4 lg:px-8 w-full gap-[48px] lg:gap-[90px]">
                 <h2 className="text-[36px] lg:text-[45px] font-medium tracking-[-0.03em] lg:tracking-tight leading-[40px] lg:leading-[65px]">
                     Beautiful from the inside
                 </h2>
                 <div
                     ref={scrollRef}
-                    className="flex flex-col gap-[40px] mt-8 md:flex-row md:overflow-x-auto md:flex-nowrap md:gap-[40px] scrollbar-none md:snap-x md:snap-mandatory"
-                    style={{ 
-                        contain: 'layout style paint',
-                        willChange: 'scroll-position'
+                    className="flex flex-col gap-[40px] mt-8 md:flex-row md:overflow-x-auto md:flex-nowrap md:gap-[40px] scrollbar-none md:snap-x md:snap-mandatory md:my-20"
+                    style={{
+                        contain: "layout style paint",
+                        willChange: "scroll-position",
                     }}
                 >
                     {FEATURES.map((feature, idx) => (

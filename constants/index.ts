@@ -33,4 +33,20 @@ const FEATURES: Feature[] = [
     },
 ];
 
-export { FEATURES };
+const MORE_FEATURES: MoreFeature[] = [
+    {
+        title: "Wake up to your sleep insights",
+        description: "Power up your online and in person interview rounds with Unberry AI assisted interviews.",
+        image: "/wake-up.png",
+        link: "/",
+    },
+    {
+        title: "Temperature tracking made easy",
+        description:
+            "Deploy Fully Automated Interviews as pre-screening layer enabling first line of automated screening.",
+        image: "/temperature.png",
+        link: "/",
+    },
+];
+
+export { FEATURES, MORE_FEATURES };

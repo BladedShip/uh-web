@@ -5,3 +5,10 @@ type Feature = {
     tags: string[];
     features: string[];
 };
+
+type MoreFeature = {
+    title: string;
+    description: string;
+    image: string;
+    link: string;
+};
