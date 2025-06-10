@@ -18,3 +18,15 @@ type EvenMoreFeature = {
     description: string;
     image: string;
 };
+
+type StatCardProps = {
+    value: string;
+    description: string;
+    bgColor: string;
+    textColor: string;
+    roundedClass: string;
+    width: string;
+    padding: string;
+    className?: string;
+    textContainerClassName?: string;
+};
