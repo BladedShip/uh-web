@@ -49,4 +49,30 @@ const MORE_FEATURES: MoreFeature[] = [
     },
 ];
 
-export { FEATURES, MORE_FEATURES };
+const EVEN_MORE_FEATURES: EvenMoreFeature[] = [
+    {
+        title: "Precision engineering at the UltraFactory",
+        description:
+            "Ultrahuman's integrated production facility ensures gold-standard performance testing, providing complete control.",
+        image: "/precision.svg",
+    },
+    {
+        title: "More accurate from the Finger than the Wrist",
+        description:
+            "The finger, with its higher perfusion index and arterioles, serves as a richer and more accurate source of biomarker information.",
+        image: "/accurate.svg",
+    },
+    {
+        title: "Trusted by the World's #1 Ranked Cycling Team and more",
+        description: "UAE Team Emirates, Team ADQ, and many other high-performance teams worldwide.",
+        image: "/trust.svg",
+    },
+    {
+        title: "Precision engineering at the UltraFactory",
+        description:
+            "Ultrahuman's integrated production facility ensures gold-standard performance testing, providing complete control.",
+        image: "/precision-returns.svg",
+    },
+];
+
+export { FEATURES, MORE_FEATURES, EVEN_MORE_FEATURES };

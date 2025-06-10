@@ -12,3 +12,9 @@ type MoreFeature = {
     image: string;
     link: string;
 };
+
+type EvenMoreFeature = {
+    title: string;
+    description: string;
+    image: string;
+};
