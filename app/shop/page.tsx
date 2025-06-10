@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 const ShopPage = (props: Props) => {
-  return (
-    <div>ShopPage</div>
-  )
-}
+    return <div className="flex flex-col md:flex-row"></div>;
+};
 
-export default ShopPage
+export default ShopPage;
