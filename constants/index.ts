@@ -108,10 +108,10 @@ const PRICE_ADDONS_LABELS = {
         free: "Free",
     },
     tradeIn: {
-        "uh-air": "Ultrahuman Ring AIR",
-        "uh-r1": "Ultrahuman Ring R1",
-        "og-3": "Oura Gen-3",
-        "og-2": "Oura G-2",
+        "uh-air": "Ultrahuman Ring AIR - Get ₹7,200 trade in credit",
+        "uh-r1": "Ultrahuman Ring R1 - Get ₹5,400 trade in credit",
+        "og-3": "Oura Gen-3 - Get ₹4,200 trade in credit",
+        "og-2": "Oura Gen-2 - Get ₹2,100 trade in credit",
     },
     color: {
         rt: "Raw Titanium",

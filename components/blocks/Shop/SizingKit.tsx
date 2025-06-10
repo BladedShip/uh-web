@@ -105,7 +105,9 @@ const SizingKit = (props: Props) => {
                                 }
                                 className="flex-1"
                             >
-                                <p className="text-sm text-left tracking-[-0.03em] leading-[1.2]">{mapSize}</p>
+                                <p className="text-sm text-left tracking-[-0.03em] leading-[1.2] font-semibold">
+                                    {mapSize}
+                                </p>
                             </CardWrapper>
                         ))}
                     </div>

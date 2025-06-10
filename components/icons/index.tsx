@@ -110,4 +110,20 @@ const DispatchIcon = ({ className }: { className?: string }) => (
     </svg>
 );
 
-export { ChevronLeftIcon, ChevronRightIcon, ImageIcon, CheckMarkIcon, DispatchIcon };
+const CheckMarkGreenIcon = ({ className }: { className?: string }) => (
+    <svg
+        width="15"
+        height="15"
+        viewBox="0 0 15 15"
+        className={className}
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            d="M7.71418 0.0031614C3.57446 -0.115909 0.122335 3.14324 0.00313894 7.28295C0.00104631 7.35588 0 7.42871 0 7.50164C0 11.643 3.35731 15 7.49836 15C11.6394 15 14.9967 11.6427 14.9967 7.50164C14.9985 3.44308 11.7707 0.119789 7.71399 0.00327122L7.71418 0.0031614ZM10.8401 3.78984L12.3256 5.2754L7.86903 9.7277L6.38347 11.2133L4.90252 9.7277L2.67158 7.50158L4.15713 6.01602L6.38326 8.24215L10.8401 3.78984Z"
+            fill="#47920C"
+        ></path>
+    </svg>
+);
+
+export { ChevronLeftIcon, ChevronRightIcon, ImageIcon, CheckMarkIcon, DispatchIcon, CheckMarkGreenIcon };
