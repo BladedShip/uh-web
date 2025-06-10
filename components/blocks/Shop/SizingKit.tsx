@@ -43,7 +43,7 @@ const SizingKit = (props: Props) => {
                         </p>
                         <div className="flex flex-col gap-2">
                             {sizingFeatures.map((feature) => (
-                                <div className="flex gap-2 items-center">
+                                <div className="flex gap-2 items-center" key={feature}>
                                     <CheckMarkIcon className="w-4 h-4 flex-shrink-0" />
                                     <p key={feature} className="text-xs text-left font-medium">
                                         {feature}
