@@ -10,7 +10,7 @@ const ShopFooter = () => {
     const { color, charger, tradeIn, engraving, powerPlug, coverage, size } = product;
 
     const scrollToSummary = () => {
-        const summaryElement = document.querySelector("[data-summary]");
+        const summaryElement = document.getElementById("summary");
         if (summaryElement) {
             summaryElement.scrollIntoView({ behavior: "smooth" });
         }
@@ -26,7 +26,7 @@ const ShopFooter = () => {
                     Show Breakup
                     <span className="text-lg">›</span>
                 </button>
-                <div className="flex gap-2 items-center">
+                <div className="hidden gap-2 items-center md:flex">
                     <DispatchIcon className="w-4 h-4 flex-shrink-0" />
                     <p className="text-sm text-left tracking-[-0.03em] leading-[1.2]">
                         Dispatched by :{" "}
@@ -63,7 +63,7 @@ const ShopFooter = () => {
                 }}
                 onClick={() => {
                     if (!coverage) {
-                        const coverageElement = document.querySelector("[data-coverage]");
+                        const coverageElement = document.getElementById("coverage");
                         if (coverageElement) {
                             coverageElement.scrollIntoView({ behavior: "smooth" });
                         }

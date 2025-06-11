@@ -54,7 +54,7 @@ const Summary = () => {
     }
 
     return (
-        <div className="bg-[#F5F5F5] rounded-2xl p-6 mx-4 mb-6" data-summary>
+        <div className="bg-[#F5F5F5] rounded-2xl p-6 mx-4 mb-6" id="summary">
             {/* Header */}
             <h2 className="text-2xl font-medium tracking-[-0.04em] mb-6">Almost there. Here&apos;s your order summary.</h2>
 

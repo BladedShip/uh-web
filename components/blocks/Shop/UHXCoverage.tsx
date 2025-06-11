@@ -20,7 +20,7 @@ const UHXCoverage = () => {
     ];
 
     return (
-        <VariantWrapper title="UltrahumanX Coverage." subtitle="Protect your new Ring." data-coverage>
+        <VariantWrapper title="UltrahumanX Coverage." subtitle="Protect your new Ring." id="coverage">
             <div className="flex flex-col gap-4">
                 <CardWrapper
                     isSelected={selectedCoverage === "1-year"}
